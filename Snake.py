@@ -4,6 +4,9 @@ from random import seed
 from random import randint
 
 
+SPEED = 0.07    # cannot be negative. 0 means fastest.
+
+
 class Snake:
 
     body = pyglet.resource.image('assets/body.png')  # image for the body
@@ -211,7 +214,7 @@ def on_draw():
     food_img.blit(food[0], food[1])
 
 
-pyglet.clock.schedule_interval(update, 0.07)
+pyglet.clock.schedule_interval(update, SPEED)
 
 for x in range(0, 7):
     sn.add_block()
