@@ -4,24 +4,22 @@ from random import seed
 from random import randint
 
 
-SPEED = 0.07    # cannot be negative. 0 means fastest.
+SPEED = 0.07
 
 
 class Snake:
 
-    body = pyglet.resource.image('assets/body.png')  # image for the body
-    head = pyglet.resource.image('assets/head.png')
-    bg = pyglet.resource.image('assets/background.png')
-    direction = {'UP': 0, 'RIGHT': 90, 'DOWN': 180, 'LEFT': 270}  # dictionary defining the directions, where the
-    batch = pyglet.graphics.Batch()  # numbers are angles, moving clockwise.
-    sprites = [pyglet.sprite.Sprite(img=head, batch=batch)]  # contains the blocks of body of the snake
-    snake = [direction['UP']]  # contains directions, of the sprites
-    turnPoints = []  # contains the points where the body is supposed to turn
-    prev_dir = []  # contains all the directions that the head has taken, and are yet to be taken by the body
-    flag = False
-
     def __init__(self):
-        pass
+        self.body = pyglet.resource.image('assets/body.png')  # image for the body
+        self.head = pyglet.resource.image('assets/head.png')
+        self.bg = pyglet.resource.image('assets/background.png')
+        self.direction = {'UP': 0, 'RIGHT': 90, 'DOWN': 180, 'LEFT': 270}  # dictionary defining the directions, where the
+        self.batch = pyglet.graphics.Batch()  # numbers are angles, moving clockwise.
+        self.sprites = [pyglet.sprite.Sprite(img=self.head, batch=self.batch)]  # contains the blocks of body of the snake
+        self.snake = [self.direction['UP']]  # contains directions, of the sprites
+        self.turnPoints = []  # contains the points where the body is supposed to turn
+        self.prev_dir = []  # contains all the directions that the head has taken, and are yet to be taken by the body
+        self.flag = False
 
     def add_block(self):
 
