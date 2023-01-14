@@ -6,8 +6,8 @@ Snake - Pyglet
 
 
 Dependencies:
-  -Pyglet
-  -Random
+* Pyglet
+* Random
 
 
 install dependencies:
