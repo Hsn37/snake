@@ -3,6 +3,8 @@ Snake - Pyglet
 
 ![Snake](img1.png)
 ![Snake](img2.png)
+
+
 Dependencies:
   -Pyglet
   -Random
